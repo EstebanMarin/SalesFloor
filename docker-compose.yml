@@ -14,4 +14,10 @@ services:
   web:
     image: httpd
     volumes:
-      - ./front/html:/usr/local/apache2/htdocs/
+      - ./front_v0.1/html:/usr/local/apache2/htdocs/
+  backendv0:
+    build: 
+      context: ./back_v01/
+      dockerfile: Dockerfile
+
+    
