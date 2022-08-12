@@ -14,8 +14,7 @@
 <script>
     $(function () {
         $.ajax({
-            //TODO fix this
-            // url: 'http://mybackend.com:3000/service',
+            url: 'http://localhost:3000/healthz',
             success: res => {
                 $('#response').text(res);
             },

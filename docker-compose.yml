@@ -16,8 +16,8 @@ services:
     volumes:
       - ./front_v0.1/html:/usr/local/apache2/htdocs/
   backendv0:
-    build: 
-      context: ./back_v01/
+    build:
+      context: ./back_v0.1/
       dockerfile: Dockerfile
-
-    
+    ports:
+      - 3000:3000
