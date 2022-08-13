@@ -22,17 +22,18 @@ services:
     ports:
       - '80:80'
       # - '8080:8080'
+      - '8081:8081'
       - '3000:3000'
   web:
     image: httpd
     volumes:
       - ./front_v0.1/html:/usr/local/apache2/htdocs/
-    ports:
-      - '8080:8080'
-  # backendv0:
-  #   image: node-back:latest
-  #   build:
-  #     context: ./back_v0.1/
-  #     dockerfile: Dockerfile
+    # ports:
+    #   - '8080:8080'
+  backendv0:
+    image: node-back:latest
+    build:
+      context: ./back_v0.1/
+      dockerfile: Dockerfile
     # ports:
     #   - 3000:3000
