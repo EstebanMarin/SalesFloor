@@ -20,10 +20,12 @@ services:
       - ./data/:/data/
       # - ./front_v0.2/index.html:/home/index.html
     ports:
-      - '80:80'
-      # - '8080:8080'
-      - '8081:8081'
+      - '82:82'
+      # # - '8080:8080'
+      # - '8081:8081'
       - '3000:3000'
+      - '2000:2000'
+      - '3002:3002'
   web:
     image: httpd
     volumes:
@@ -37,3 +39,11 @@ services:
       dockerfile: Dockerfile
     # ports:
     #   - 3000:3000
+  next-app:
+    image: next-app:latest
+    build:
+      context: ./front_v1.2/salesfloor/next-app
+      dockerfile: ./dev.Dockerfile
+    volumes:
+      - ./front_v1.2/salesfloor/next-app/src:/app/src
+      - ./front_v1.2/salesfloor/next-app/public:/app/public

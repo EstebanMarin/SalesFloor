@@ -13,3 +13,21 @@ docker-compose up
 docker build -t nginx-local:latest - < nginx.Dockerfile 
 docker run --name test-nginx -d -p 80:80 nginx-local:latest                                                        
 ```
+### Releases 
+#### frontv1
+```
+http://localhost:2000/
+```
+#### 0.2
+Big milestone, services talking to eachother
+```
+http://localhost:82/www/
+```
+#### 0.1
+```
+http://localhost:82
+```
+#### 0.0
+```
+http://localhost:82/images/cat.jpg
+```
