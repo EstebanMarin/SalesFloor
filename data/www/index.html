@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>CORS</title>
+</head>
+
+<body>
+    Response: <span id="response"></span>
+</body>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(function () {
+        $.ajax({
+            url: 'http://backendv0:3000/healthz',
+            success: res => {
+                $('#response').text(res);
+            },
+            error: err => {
+                $('#response').text(err.statusText);
+            }
+        })
+    });
+</script>
+
+</html>
