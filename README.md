@@ -14,7 +14,7 @@ docker build -t nginx-local:latest - < nginx.Dockerfile
 docker run --name test-nginx -d -p 80:80 nginx-local:latest                                                        
 ```
 ### Releases 
-#### frontv1
+#### frontv1.0
 ```
 http://localhost:2000/
 ```
@@ -28,6 +28,7 @@ http://localhost:82/www/
 http://localhost:82
 ```
 #### 0.0
+Haha yes this was literaly my first version
 ```
 http://localhost:82/images/cat.jpg
 ```

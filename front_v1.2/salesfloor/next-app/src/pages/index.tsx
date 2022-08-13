@@ -6,13 +6,14 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next app</title>
+        <title>Esteban Marin</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js</a> on Docker Compose!
+          {/* Reddit app<a href="https://nextjs.org">nest.js</a> */}
+          Reddit app
         </h1>
 
         <p className={styles.description}>

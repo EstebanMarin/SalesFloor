@@ -12,11 +12,10 @@ This example contains everything needed to get a Next.js development and product
 - Easy configuration with YAML files
 
 ## How to use
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init), [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/), or [pnpm](https://pnpm.io) to bootstrap the example:
+make sure to run this to generate the `package.json` file
 
 ```bash
-npx create-next-app --example with-docker-compose with-docker-compose-app
+npm install
 ```
 
 ```bash

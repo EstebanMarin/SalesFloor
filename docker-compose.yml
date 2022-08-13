@@ -37,6 +37,8 @@ services:
     build:
       context: ./back_v0.1/
       dockerfile: Dockerfile
+    volumes:
+      - ./back_v0.1/app.js:/opt/node_app/app/app.js
     # ports:
     #   - 3000:3000
   next-app:
