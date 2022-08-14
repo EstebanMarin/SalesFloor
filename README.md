@@ -5,15 +5,24 @@
 ```shell
 docker-compose up
 ```
-### CORS, reverse-proxy, Ngnix
-- https://www.section.io/engineering-education/how-to-use-cors-in-nodejs-with-express/
-- https://blogs.perficient.com/2021/02/10/nginx-proxy-for-cors/
+### CORS, reverse-proxy, Ngnix, Docker, docker-compose
+In order to work efficiently, manage complexity I push to have a dev environment that:
+- encourages decoupling
+- share common network
+- easy to start
+- based in Nginx, docker, docker-compose. 
+- https://docs.nginx.com/nginx/admin-guide/web-server/reverse-proxy/
 ###
 ```shell
 docker build -t nginx-local:latest - < nginx.Dockerfile 
 docker run --name test-nginx -d -p 80:80 nginx-local:latest                                                        
 ```
 ### Releases 
+### backv0.1 Stable
+```
+http://localhost:3000/
+make sure to check the `back_v0.1/SalesFloor.postman_collection.json/` file
+```
 #### frontv1.0
 ```
 http://localhost:2000/
