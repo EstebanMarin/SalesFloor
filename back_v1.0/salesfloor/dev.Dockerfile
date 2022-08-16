@@ -1,6 +1,8 @@
-FROM openjdk:11
-ENV SBT_VERSION 1.5.5
-RUN curl -L -o sbt-$SBT_VERSION.zip https://github.com/sbt/sbt/releases/download/v$SBT_VERSION/sbt-$SBT_VERSION.zipRUN unzip sbt-$SBT_VERSION.zip -d ops
-WORKDIR /salesfloor
-ADD . /salesfloor
-CMD /ops/sbt/bin/sbt run
+FROM openjdk:17
+RUN curl -L -o sbt.zip https://github.com/sbt/sbt/releases/tag/v1.7.1
+# RUN unzip sbt.zip -d ops
+# https://yuchen52.medium.com/getting-started-with-docker-scala-sbt-d91f8ac22f5f
+
+# WORKDIR /salesfloor
+# ADD . /salesfloor
+# CMD /ops/sbt/bin/sbt run
