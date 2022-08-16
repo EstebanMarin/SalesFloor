@@ -1,5 +1,5 @@
-package com.estebanmarin
-package scalasalesfloor
+package com.esteban
+package salesfloorsalesfloor
 
 import scala.language.adhocExtensions
 

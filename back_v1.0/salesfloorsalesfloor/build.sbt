@@ -1,12 +1,6 @@
 import Dependencies._
 
-enablePlugins(UniversalPlugin)
-enablePlugins(JavaAppPackaging)
-enablePlugins(DockerPlugin)
-// dockerBaseImage := "scalaback"
-dockerExposedPorts := Seq(9000, 9443)
-
-ThisBuild / organization := "com.estebanmarin"
+ThisBuild / organization := "com.esteban"
 ThisBuild / scalaVersion := "3.1.3"
 
 ThisBuild / scalacOptions ++=
@@ -22,10 +16,10 @@ ThisBuild / scalacOptions ++=
     "-Ysafe-init", // experimental (I've seen it cause issues with circe)
   ) ++ Seq("-rewrite", "-indent") ++ Seq("-source", "future-migration")
 
-lazy val `scalasalesfloor` =
+lazy val `salesfloorsalesfloor` =
   project
     .in(file("."))
-    .settings(name := "ScalaSalesfloor")
+    .settings(name := "salesfloorsalesfloor")
     .settings(commonSettings)
     .settings(dependencies)
 

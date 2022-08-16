@@ -1,5 +1,5 @@
-package com.estebanmarin
-package scalasalesfloor
+package com.esteban
+package salesfloorsalesfloor
 
 @main def Main(args: String*): Unit =
   println("─" * 100)
