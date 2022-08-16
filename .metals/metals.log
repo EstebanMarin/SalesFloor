@@ -75,3 +75,68 @@ INFO: Unsupported notification method: $/setTrace
 2022.08.16 10:17:59 WARN  no build target for: /home/esteban/PersonalCode/SalesFloor/back_v1.0/salesfloorsalesfloor/sbt.sbt[0m
 2022.08.16 10:27:47 WARN  no build target for: /home/esteban/PersonalCode/SalesFloor/back_v1.0/salesfloorsalesfloor/src/main/scala/com/esteban/salesfloorsalesfloor/Main.scala[0m
 2022.08.16 10:28:01 WARN  no build target for: /home/esteban/PersonalCode/SalesFloor/back_v1.0/salesfloorsalesfloor/src/main/scala/com/esteban/salesfloorsalesfloor/Main.scala[0m
+2022.08.16 10:37:13 WARN  no build target for: /home/esteban/PersonalCode/SalesFloor/back_v1.0/salesfloorsalesfloor/sbt.sbt[0m
+2022.08.16 10:37:15 WARN  no build target for: /home/esteban/PersonalCode/SalesFloor/back_v1.0/salesfloorsalesfloor/version.sbt[0m
+2022.08.16 10:37:23 WARN  no build target for: /home/esteban/PersonalCode/SalesFloor/back_v1.0/salesfloorsalesfloor/version.sbt[0m
+2022.08.16 10:37:25 WARN  no build target for: /home/esteban/PersonalCode/SalesFloor/back_v1.0/salesfloorsalesfloor/sbt.sbt[0m
+2022.08.16 10:37:32 WARN  no build target for: /home/esteban/PersonalCode/SalesFloor/back_v1.0/salesfloorsalesfloor/project/sbt.sbt[0m
+2022.08.16 10:37:33 WARN  no build target for: /home/esteban/PersonalCode/SalesFloor/back_v1.0/salesfloorsalesfloor/project/plugins.sbt[0m
+2022.08.16 10:37:38 WARN  no build target for: /home/esteban/PersonalCode/SalesFloor/back_v1.0/salesfloorsalesfloor/sbt.sbt[0m
+2022.08.16 10:46:23 ERROR text document: file:///home/esteban/PersonalCode/SalesFloor/back_v1.0/salesfloorsalesfloor/src/main/scala/com/esteban/salesfloorsalesfloor/Main.scalajava.nio.file.NoSuchFileException: /home/esteban/PersonalCode/SalesFloor/back_v1.0/salesfloorsalesfloor/src/main/scala/com/esteban/salesfloorsalesfloor/Main.scala
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:215)
+	at java.nio.file.Files.newByteChannel(Files.java:370)
+	at java.nio.file.Files.newByteChannel(Files.java:421)
+	at java.nio.file.Files.readAllBytes(Files.java:3205)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$textDocument$2(InteractiveSemanticdbs.scala:90)
+	at scala.Option.getOrElse(Option.scala:201)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$textDocument$1(InteractiveSemanticdbs.scala:90)
+	at java.util.HashMap.compute(HashMap.java:1228)
+	at java.util.Collections$SynchronizedMap.compute(Collections.java:2690)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.textDocument(InteractiveSemanticdbs.scala:89)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.textDocument(InteractiveSemanticdbs.scala:63)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.metals.DocumentHighlightProvider.documentHighlight(DocumentHighlightProvider.scala:27)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$documentHighlights$1(MetalsLanguageServer.scala:1508)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+[0m
+2022.08.16 10:46:23 ERROR text document: file:///home/esteban/PersonalCode/SalesFloor/back_v1.0/salesfloorsalesfloor/src/main/scala/com/esteban/salesfloorsalesfloor/Main.scalajava.nio.file.NoSuchFileException: /home/esteban/PersonalCode/SalesFloor/back_v1.0/salesfloorsalesfloor/src/main/scala/com/esteban/salesfloorsalesfloor/Main.scala
+	at sun.nio.fs.UnixException.translateToIOException(UnixException.java:92)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:111)
+	at sun.nio.fs.UnixException.rethrowAsIOException(UnixException.java:116)
+	at sun.nio.fs.UnixFileSystemProvider.newByteChannel(UnixFileSystemProvider.java:215)
+	at java.nio.file.Files.newByteChannel(Files.java:370)
+	at java.nio.file.Files.newByteChannel(Files.java:421)
+	at java.nio.file.Files.readAllBytes(Files.java:3205)
+	at scala.meta.internal.io.PlatformFileIO$.slurp(PlatformFileIO.scala:45)
+	at scala.meta.internal.io.FileIO$.slurp(FileIO.scala:24)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$textDocument$2(InteractiveSemanticdbs.scala:90)
+	at scala.Option.getOrElse(Option.scala:201)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.$anonfun$textDocument$1(InteractiveSemanticdbs.scala:90)
+	at java.util.HashMap.compute(HashMap.java:1228)
+	at java.util.Collections$SynchronizedMap.compute(Collections.java:2690)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.textDocument(InteractiveSemanticdbs.scala:89)
+	at scala.meta.internal.metals.InteractiveSemanticdbs.textDocument(InteractiveSemanticdbs.scala:63)
+	at scala.meta.internal.metals.AggregateSemanticdbs.loop$1(AggregateSemanticdbs.scala:30)
+	at scala.meta.internal.metals.AggregateSemanticdbs.textDocument(AggregateSemanticdbs.scala:36)
+	at scala.meta.internal.metals.CodeLensProvider.findLenses(CodeLensProvider.scala:22)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$2(MetalsLanguageServer.scala:1693)
+	at scala.meta.internal.metals.TimerProvider.timedThunk(TimerProvider.scala:25)
+	at scala.meta.internal.metals.MetalsLanguageServer.$anonfun$codeLens$1(MetalsLanguageServer.scala:1691)
+	at scala.meta.internal.metals.CancelTokens$.$anonfun$apply$2(CancelTokens.scala:26)
+	at scala.concurrent.Future$.$anonfun$apply$1(Future.scala:678)
+	at scala.concurrent.impl.Promise$Transformation.run(Promise.scala:467)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at java.lang.Thread.run(Thread.java:834)
+[0m
