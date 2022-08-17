@@ -2,7 +2,7 @@ const express = require('express')
 const axios = require('axios').default;
 const cors = require('cors');
 const app = express()
-const port = 3000
+const port = 4000
 const BASE_API_URL = 'https://hacker-news.firebaseio.com/v0';
 
 const getStory = async (id) => {
