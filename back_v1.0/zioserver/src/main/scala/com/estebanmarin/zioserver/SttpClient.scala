@@ -13,9 +13,8 @@ import sttp.client3.{Identity, Response, ResponseException}
 final case class SttpClient()
 object SttpClient {
   type TopStoriesIds = List[HackerRankById]
-  val query                = "language:scala"
-  val sort: Option[String] = Some("stars")
-  val getTopByID           = basicRequest
+  val emptyHRID  = HackerRankById(Int.MinValue)
+  val getTopByID = basicRequest
     .get(uri"https://hacker-news.firebaseio.com/v0/topstories.json")
     .response(asJson[TopStoriesIds])
 
@@ -24,18 +23,15 @@ object SttpClient {
     .response(asJson[Item])
 
   val getTopbyID = getTopByID.send(backend)
-  getTopbyID.body match {
-    case Left(error)                => println(s"Error when executing request: $error")
-    case Right(data: TopStoriesIds) =>
-      println(s"[RESPONSE]  => \n ${data}")
-  }
 
-  def getItems(hId: HackerRankById)                      = getStory(hId).send(backend).body match {
-    case Left(error)       => None
-    case Right(data: Item) =>
-      println(s"[RESPONSE]  => \n ${data}")
-      Some(data)
+  def getItems(hId: HackerRankById) =
+    getStory(hId).send(backend).body match {
+      case Left(error)       => throw new RuntimeException(s"$error")
+      case Right(data: Item) => data
+    }
+
+  def mapOverIds = getTopbyID.body match {
+    case Left(error)                => throw new RuntimeException(s"$error")
+    case Right(data: TopStoriesIds) => data.map(getItems)
   }
-  def mapOverID(data: TopStoriesIds): List[Option[Item]] =
-    data.map(getItems).filter(_.nonEmpty)
 }

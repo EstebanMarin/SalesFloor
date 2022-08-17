@@ -8,7 +8,9 @@ object Zioserver extends App {
   val defaultValue = """{"greetings": "Hello World!"}"""
 
   val app: HttpApp[Any, Nothing] = Http.collect[Request] {
-    case Method.GET -> !! / "json" => Response.json(SttpClient.getTopbyID.toString())
+    case Method.GET -> !! / "json" => 
+      // Response.json(SttpClient.getTopbyID.toString())
+      Response.text(SttpClient.getTopbyID.toString())
   }
 
   // Run it like any simple app

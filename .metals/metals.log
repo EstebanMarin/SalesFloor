@@ -140,3 +140,14 @@ INFO: Unsupported notification method: $/setTrace
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
 	at java.lang.Thread.run(Thread.java:834)
 [0m
+2022.08.17 09:58:09 INFO  tracing is disabled for protocol LSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/esteban/PersonalCode/SalesFloor/.metals/lsp.trace.json or /home/esteban/.cache/metals/lsp.trace.json[0m
+2022.08.17 09:58:10 INFO  logging to file /home/esteban/PersonalCode/SalesFloor/.metals/metals.log[0m
+2022.08.17 09:58:10 INFO  Started: Metals version 0.11.8 in workspace '/home/esteban/PersonalCode/SalesFloor' for client Visual Studio Code 1.70.1.[0m
+2022.08.17 09:58:14 WARN  Flyway upgrade recommended: H2 2.1.214 is newer than this version of Flyway and support has not been tested. The latest supported version of H2 is 2.1.210.[0m
+2022.08.17 09:58:14 INFO  time: initialize in 4.08s[0m
+2022.08.17 09:58:15 INFO  Attempting to connect to the build server...[0m
+2022.08.17 09:58:15 INFO  Bloop uses /home/esteban/.sdkman/candidates/java/11.0.2-open defined at /home/esteban/.bloop/bloop.json[0m
+2022.08.17 09:58:15 INFO  tracing is disabled for protocol BSP, to enable tracing of incoming and outgoing JSON messages create an empty file at /home/esteban/PersonalCode/SalesFloor/.metals/bsp.trace.json or /home/esteban/.cache/metals/bsp.trace.json[0m
+2022.08.17 09:58:15 INFO  time: Connected to build server in 0.21s[0m
+2022.08.17 09:58:15 INFO  Connected to Build server: Bloop v1.5.3[0m
+2022.08.17 09:58:17 INFO  time: indexed workspace in 1.9s[0m
