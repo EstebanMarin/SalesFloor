@@ -21,6 +21,12 @@ docker build -t nginx-local:latest - < nginx.Dockerfile
 docker run --name test-nginx -d -p 80:80 nginx-local:latest                                                        
 ```
 # Releases 
+### backv0.1 frontv1.2
+Next.js, with typescript, tailwind && daisyUI. 
+Ready for backend improvement using Scala
+```
+http://localhost:3000/
+```
 ### backv0.1 Stable
 ```
 http://localhost:3000/

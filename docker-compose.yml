@@ -40,14 +40,14 @@ services:
       - ./back_v0.1/app.js:/opt/node_app/app/app.js
     # ports:
     #   - 3000:3000
-  next-app:
-    image: next-app:latest
-    build:
-      context: ./front_v1.2/salesfloor/next-app
-      dockerfile: ./dev.Dockerfile
-    volumes:
-      - ./front_v1.2/salesfloor/next-app/src:/app/src
-      - ./front_v1.2/salesfloor/next-app/public:/app/public
+  # next-app:
+  #   image: next-app:latest
+  #   build:
+  #     context: ./front_v1.2/salesfloor/next-app
+  #     dockerfile: ./dev.Dockerfile
+  #   volumes:
+  #     - ./front_v1.2/salesfloor/next-app/src:/app/src
+  #     - ./front_v1.2/salesfloor/next-app/public:/app/public
 
   web-app:
     image: web-app:latest
@@ -56,4 +56,5 @@ services:
       dockerfile: ./dev.Dockerfile
     volumes:
       - ./front_v1.2/salesfloor/typescriptdockertailwind/pages:/app/pages
+      - ./front_v1.2/salesfloor/typescriptdockertailwind/components:/app/components
     command: npm run dev
