@@ -21,8 +21,6 @@ services:
       # - ./front_v0.2/index.html:/home/index.html
     ports:
       - '82:82'
-      # # - '8080:8080'
-      # - '8081:8081'
       - '4000:4000'
       - '3000:3000'
       - '2000:2000'
@@ -50,3 +48,12 @@ services:
     volumes:
       - ./front_v1.2/salesfloor/next-app/src:/app/src
       - ./front_v1.2/salesfloor/next-app/public:/app/public
+
+  web-app:
+    image: web-app:latest
+    build:
+      context: ./front_v1.2/salesfloor/typescriptdockertailwind
+      dockerfile: ./dev.Dockerfile
+    volumes:
+      - ./front_v1.2/salesfloor/typescriptdockertailwind/pages:/app/pages
+    command: npm run dev
