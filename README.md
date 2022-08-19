@@ -21,6 +21,13 @@ docker build -t nginx-local:latest - < nginx.Dockerfile
 docker run --name test-nginx -d -p 80:80 nginx-local:latest                                                        
 ```
 # Releases 
+### final release `backv1.0` && `frontv1.2`
+```
+docker-compose up
+```
+Scala backend shipped through docker repository
+https://hub.docker.com/repository/docker/estebanmarin/scala-salesfloor/general#description
+
 ### backv0.1 frontv1.2
 Next.js, with typescript, tailwind && daisyUI. 
 Ready for backend improvement using Scala

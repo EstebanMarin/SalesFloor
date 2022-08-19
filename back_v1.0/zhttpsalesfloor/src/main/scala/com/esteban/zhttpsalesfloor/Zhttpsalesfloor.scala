@@ -8,14 +8,14 @@ import zhttp.service.Client
 
 object Zhttpsalesfloor extends App {
   def app(data: String): HttpApp[Any, Nothing] = Http.collect[Request] {
-    case Method.GET -> !! / "json" => Response.json(data)
+    case Method.GET -> !! => Response.json(data)
   }
 
   val greet: HttpApp[Any, Nothing]                               = Http.text("Esteban")
   override def run(args: List[String]): URIO[zio.ZEnv, ExitCode] =
     (for {
-      _            <- ZIO.succeed(println("[SERVER] Started application"))
+      _    <- ZIO.succeed(println("[SERVER] Started application"))
       json <- ZIOHttpsClient.program
-      _            <- Server.start(8090, app(json))
+      _    <- Server.start(8090, app(json))
     } yield ()).exitCode
 }
