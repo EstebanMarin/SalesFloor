@@ -34,4 +34,8 @@ object SttpClient {
     case Left(error)                => throw new RuntimeException(s"$error")
     case Right(data: TopStoriesIds) => data.map(getItems)
   }
+
+  def ZGetTopByID = ZIO.fromTry {
+    Try(getTopByID.send(backend))
+  }
 }
