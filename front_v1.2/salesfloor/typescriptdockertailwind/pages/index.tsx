@@ -67,8 +67,8 @@ const Home: NextPage = () => {
             </h1>
           </div>
           <div className="text-center">
-            <p> For <b>Node.js</b> <a className="link link-primary" href="http://localhost:3000">Here</a></p>
-            <p> For <b>Scala</b> <a className="link link-primary" href="http://localhost:3002">Here</a></p>
+            <p> For <b>Node.js</b> <a className="link link-primary" href="http://localhost:3000">localhost:3000</a></p>
+            <p> For <b>Scala</b> <a className="link link-primary" href="http://localhost:3002">localhost:3002</a></p>
             <p>Benchmark <b>Node.js</b> vs <b>Scala</b> local service</p>
           </div>
         </div>
