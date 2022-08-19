@@ -6,6 +6,7 @@ import zhttp.service.client.ClientSSLHandler.ClientSSLOptions
 import zhttp.service.{ChannelFactory, Client, EventLoopGroup}
 import zio._
 import com.esteban.zhttpsalesfloor.domain.HackerRankById._
+import com.esteban.zhttpsalesfloor.domain.Item
 import com.esteban.zhttpsalesfloor.domain.Item._
 
 object ZIOHttpsClient {
@@ -23,13 +24,14 @@ object ZIOHttpsClient {
 
 
   val program = (for {
-    _                              <- console.putStrLn(s"Hello")
+    _                              <- console.putStrLn(s"[STARTING CLIENT]")
     resbyid: Client.ClientResponse <- Client.request(url)
     stringList                     <- resbyid.bodyAsString
     listbyID   = stringList.filter(_ != '[').filter(_ != ']').split(',').slice(0, 30).toList
     parEffects =
       listbyID.map(getItemService)
     response: List[String] <- ZIO.collectAllPar(parEffects)
-    _                      <- console.putStrLn(s"${response.head}")
-  } yield resbyid).provideCustomLayer(env)
+    items <- Item.decoderService(response)
+    json: String = Item.itemsEncoder(items)
+  } yield json).provideCustomLayer(env)
 }

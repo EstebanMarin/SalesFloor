@@ -1,25 +1,33 @@
 package com.esteban.zhttpsalesfloor.domain
 
 import zio._
-import io.circe._, io.circe.generic.auto._, io.circe.parser._, io.circe.syntax._
-import io.circe._, io.circe.generic.semiauto._
-import scala.util.Try
+import zio.json._
 
 final case class Item(
     by: String,
-    descendants: Int,
-    id: Int,
-    Kids: List[Int],
-    time: Double,
+    descendants: Option[Int],
+    id: Option[Int],
+    Kids: Option[List[Int]],
+    time: Option[Double],
     title: String,
-    `type`: String,
-    url: String,
+    `type`: Option[String],
+    url: Option[String],
   )
 
 object Item {
-  implicit val itemDecoder: Decoder[HackerRankById]  = deriveDecoder[HackerRankById]
-  implicit val itemEncoders: Encoder[HackerRankById] = deriveEncoder[HackerRankById]
+  implicit val decoder: JsonDecoder[Item] =
+    DeriveJsonDecoder.gen[Item]
 
-  def codecService(bodys: List[String]): List[IO[ParsingFailure,Json]] =
-    bodys.map(body => ZIO.fromEither(parse(body)))
+  implicit val encoder: JsonEncoder[Item] =
+    DeriveJsonEncoder.gen[Item]
+
+  def decoderService(res: List[String]) = ZIO.collectAllPar(
+    res.map(_.fromJson[Item] match {
+      case Left(e)  => ZIO.fail(e)
+      case Right(v) => ZIO.succeed(v)
+    }),
+  )
+  
+  def itemsEncoder(items: List[Item]): String = items.toJson
+
 }

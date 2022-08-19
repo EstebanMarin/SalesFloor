@@ -10,6 +10,7 @@ object Dependencies {
 
   val `zio-test`     = "dev.zio" %% "zio-test"     % ZioVersion % Test
   val `zio-test-sbt` = "dev.zio" %% "zio-test-sbt" % ZioVersion % Test
+  val `zio-json`     = "dev.zio" %% "zio-json" % "0.1.5"
 
   val `circe-core`    = "io.circe" %% "circe-core"    % CirceVersion
   val `circe-generic` = "io.circe" %% "circe-generic" % CirceVersion
