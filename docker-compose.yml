@@ -47,6 +47,18 @@ services:
     volumes:
       - ./front_v1.2/salesfloor/typescriptdockertailwind/pages:/app/pages
       - ./front_v1.2/salesfloor/typescriptdockertailwind/components:/app/components
+      - ./front_v1.2/salesfloor/typescriptdockertailwind/.env.local:/app/.env.local
+    command: npm run dev
+
+  web-app-scala:
+    image: web-app:latest
+    build:
+      context: ./front_v1.2/salesfloor/typescriptdockertailwind
+      dockerfile: ./dev.Dockerfile
+    volumes:
+      - ./front_v1.2/salesfloor/typescriptdockertailwind/pages:/app/pages
+      - ./front_v1.2/salesfloor/typescriptdockertailwind/components:/app/components
+      - ./front_v1.2/salesfloor/typescriptdockertailwind/.env.local2:/app/.env.local
     command: npm run dev
   
   scala-back:
